@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useLayoutEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
 import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
@@ -10,10 +10,22 @@ import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
 import './header.scss';
+import transitionEndListener from "react-bootstrap/transitionEndListener";
 
 const logo = require('../../../Assets/Home/logo.png');
 
 function Header(props) {
+    const [isFixed,setIsFix] = useState(false);
+    useLayoutEffect(()=>{
+        const fixedHeader=()=>{
+            if (window.scrollY > 120){
+                setIsFix(true);
+            }else {
+                setIsFix(false);
+            }
+        }
+        window.addEventListener('scroll', fixedHeader);
+    },[])
     return (
         <div>
             <div className='menu_top'>
@@ -36,7 +48,7 @@ function Header(props) {
                     </div>
                 </div>
             </div>
-            <div className='header'>
+            <div className={`header ${isFixed? 'active':''}`}>
                 <div className='header_container'>
                     <Navbar expand="lg" className='form_menu'>
                         <Navbar.Brand className='logo_menu' href="/"><Link to= "/"><img src={logo} className='logo_img' /></Link></Navbar.Brand>
