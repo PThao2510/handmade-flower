@@ -9,6 +9,7 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import Recommend from '../../../Pages/Recommend';
 import './header.scss';
 
 const logo = require('../../../Assets/Home/logo.png');
@@ -51,9 +52,9 @@ function Header(props) {
                                     </NavDropdown.Item>
                                     <NavDropdown.Item className='text-color-header' href="#action/3.3">Nguyên Liệu</NavDropdown.Item>
                                 </NavDropdown>
-                                <Nav.Link className='text-color-header' href="#link">GIỚI THIỆU</Nav.Link>
+                                <Nav.Link className='text-color-header' href="/recommend">GIỚI THIỆU</Nav.Link>
                                 <Nav.Link className='text-color-header' href="#link">SỰ KIỆN</Nav.Link>
-                                <Nav.Link className='text-color-header' href="#link">LIÊN HỆ</Nav.Link>
+                                <Nav.Link className='text-color-header' href="/contact">LIÊN HỆ</Nav.Link>
                             </Nav>
                         </Navbar.Collapse>
 

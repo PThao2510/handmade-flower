@@ -11,36 +11,57 @@ body {
         "wdth" 100;
     padding: 0;
     margin: 0;
-    color: #222;
 }
 
 .item_product {
     margin: 0px 40px;
     padding-top: 50px;
-    ;
+    position: relative;
 
     .item_img_product {
-        position: relative;
-        display: inline-block;
 
+        .new_badge {
+            box-shadow: #eee;
+            position: absolute;
+            top: 0;
+            left: 0;
+            background-color: #a37a10; // Màu nâu
+            color: white;
+            padding: 5px 10px;
+            margin: 60px 0px 0px 10px;
+            font-size: 12px;
+            font-weight: normal;
+            z-index: 1;
+          }
         .img_product {
-            height: 350px;
-            width: 290px;
-            transition: transform 0.3s ease;
+            height: 399.96px;
+            width: 332px;
+            // border-radius: 150px 150px 0px 0px;
+            // transition: transform 0.3s;
         }
 
-        .img_product:hover {
-            transform: scale(0.9);
-        }
+
+        // .img_product:hover {
+        //     transform: scale(1.1);
+        // }
+
     }
 
     .item_content_product {
         padding-top: 20px;
-        display: flex;
+        // display: flex;
+        justify-content: center;
+
+        .title_product {
+            
+            text-align: center;
+            align-items: center;
+            // padding: 0px 35px;
+        }
 
         h5 {
             color: #000;
-            font-size: 16px;
+            font-size: 15px;
             line-height: 16px;
             font-weight: 400;
         }
@@ -48,6 +69,11 @@ body {
         h5:hover {
             color: #a37a10;
         }
+
+        span {
+            font-size: 15px;
+        }
+
     }
 
     .add_to_card {

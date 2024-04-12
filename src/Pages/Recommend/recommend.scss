@@ -1,0 +1,131 @@
+html,
+body {
+    margin: 0;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    padding: 0;
+    margin: 0;
+}
+
+.banner_container {
+    margin-top: 155px;
+    background: #f8f4ec;
+    height: 210px;
+    justify-content: center;
+    display: flex;
+    align-items: center;
+
+    // .text_recommend {
+    //     // padding-left: 70px;
+    //     align-items: center;
+
+    //     h2{
+    //         font-size: 50px;
+    //         font-family: serif;
+    //     }
+    // }
+
+    .banner_recommend {
+          background-image: url('../../Assets/Product/bannerproductt.jpg');
+          background-size: cover;
+          background-position: center;
+          background-repeat: no-repeat;
+          width: 100%;
+          height: 350px;
+    }
+
+    // // .img_bn {
+    // //     margin-left: 200px;
+    // // }
+
+    // .img_banner2 {
+    //     height: 190px;
+    //     width: 100%;
+    //     display: flex;
+    //     justify-content: space-around;
+    //     align-items: center;
+    // }
+
+
+}
+
+.container {
+
+    margin: 100px 60px;
+    justify-content: center;
+    padding-top: 50px;
+    align-items: center; 
+
+    .item_container {
+        padding-left: 10px;
+    }
+
+    .icon_container {
+        position: relative;
+        display: inline-block;
+        font-size: 60px;
+        transition: transform 0.3s ease;
+
+    }
+
+    &:hover .icon_container {
+        color: #a37a10;
+        transform: scale(1.2);
+
+    }
+
+    ul {
+        h5 {
+            padding-top: 10px;
+        }
+
+        p {
+            font-size: 14px;
+        }
+    }
+}
+
+.content_infor {
+    background: #f8f4ec;
+
+    .content_item {
+        padding: 0px 40px;
+    }
+
+    .item_infor {
+        display: flex;
+
+        .img_infor {
+            padding-left: 80px;
+        }
+
+        .img_containerr {
+            height: 400px;
+            width: 400px;
+        }
+
+        .text_infor {
+            padding: 80px;
+
+            h2 {
+                padding-left: 30px;
+                font-family: serif;
+            }
+        }
+    }
+
+    .img_infom {
+        padding-right: 80px;
+
+        .img_containerr {
+            border: 10px solid #fff;
+            box-sizing: border-box;
+        }
+    }
+}

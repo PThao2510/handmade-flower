@@ -23,8 +23,8 @@ function Home(props) {
                                 <button type="submit" class="btn_banner">Mua ngay</button>
                             </div>
                         </div>
-                        <div class="col container_img">
-                            <div class="p-3"><Link to="/"><img src={banner1} className='banner_img' /></Link></div>
+                        <div class="col banner_header_img">
+                            <div class="p-3"><Link to="/"><img src={banner1} className='header_img' /></Link></div>
                         </div>
                     </div>
                 </div>
@@ -55,10 +55,10 @@ function Home(props) {
 
                         </div>
                         <div class="col-6 col-md-3 content_right">
-                            <div className='content_infor'>
+                            <div className='item_right'>
                                 <h2>Tất cả danh mục</h2>
                                 <p>Chúng tôi luôn mong muốn đem đến cho bạn những sản phẩm mang tính riêng biệt và mới lạ.</p>
-                                <button type="text" class="btn_view">Xem tất cả</button>
+                                <Link to="/product" className="btn_view">Xem tất cả</Link>
                             </div>
                         </div>
                     </div>
@@ -69,20 +69,23 @@ function Home(props) {
                 <div className='content_itemproduct'>
                     <h5>Sản phẩm mới nhất</h5>
                 </div>
-                <Row gutter={16}>
-                    <Col className="gutter-row" span={6}>
-                        <ItemProduct />
-                    </Col>
-                    <Col className="gutter-row" span={6}>
-                        <ItemProduct />
-                    </Col>
-                    <Col className="gutter-row" span={6}>
-                        <ItemProduct />
-                    </Col>
-                    <Col className="gutter-row" span={6}>
-                        <ItemProduct />
-                    </Col>
-                </Row>
+                <div className='list_itemproduct'>
+                    <Row gutter={16}>
+                        <Col className="gutter-row" span={6}>
+                            <ItemProduct />
+                        </Col>
+                        <Col className="gutter-row" span={6}>
+                            <ItemProduct />
+                        </Col>
+                        <Col className="gutter-row" span={6}>
+                            <ItemProduct />
+                        </Col>
+                        <Col className="gutter-row" span={5}>
+                            <ItemProduct />
+                        </Col>
+
+                    </Row>
+                </div>
             </div>
         </div>
 

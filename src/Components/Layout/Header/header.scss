@@ -24,6 +24,7 @@ body {
         display: flex;
         margin: 0px 30px;
         height: 100%;
+        
 
         .top_menucontainer_left ul {
             list-style: none;
@@ -68,19 +69,30 @@ body {
     height: 85px;
     display: flex;
     align-items: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: #fff;
+    z-index: 100;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    
+
 
     .header_container {
         padding: 0px 40px 0px 20px;
-        width: 100%; 
-        
-        .form_menu{
+        width: 100%;
+
+
+        .form_menu {
             padding: 0px;
         }
     }
 
     .logo_menu {
         min-width: 450px;
-        .logo_img{
+
+        .logo_img {
             display: flex;
             width: 150px;
             height: auto;
@@ -114,17 +126,17 @@ body {
         padding-left: 310px;
         margin-bottom: 10px;
 
-        i{
+        i {
             padding-left: 10px;
             color: #222 !important;
             font-weight: 300;
-            font-size:  calc(var(--font-size-body, 16px) + 4px);
-            
+            font-size: calc(var(--font-size-body, 16px) + 4px);
+
             &:hover {
                 color: #a37a10 !important;
                 font-weight: 600;
-            } 
-    
+            }
+
         }
     }
 

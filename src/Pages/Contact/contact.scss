@@ -1,0 +1,85 @@
+html,
+body {
+    margin: 0;
+}
+
+* {
+    font-family: "Open Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+    font-variation-settings:
+        "wdth" 100;
+    padding: 0;
+    margin: 0;
+}
+
+.banner_contact{
+    margin-top: 85px;
+
+    .banner_recommend{
+        background-image: url('../../Assets/Product/bannerproductt.jpg');
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+      width: 100%;
+      height: 350px;
+    }
+}
+
+.form_infor {
+    padding: 50px 0px;
+    border-bottom: 1px solid #eee;
+
+    .row_content {
+        padding: 80px 55px;
+    }
+
+    .title_infor {
+        padding: 50px 0px;
+
+        h2 {
+            padding: 50px 50px 0px 70px;
+            font-family: serif;
+        }
+
+        .list_title {
+            padding: 0px 80px;
+
+            .text_title {
+                font-size: 15px;
+                padding: 10px 0px;
+                border-bottom: 1px solid #eee;
+
+                h5 {
+                    font-size: 18px;
+                    font-family: serif;
+                }
+            }
+
+            .text_title_end {
+                font-size: 15px;
+                padding: 10px 0px;
+
+                h5{
+                    font-family: serif;
+                    font-size: 18px;
+                }
+
+                ul{
+                    padding:0px;
+                    margin-left: -10px;
+                    display: flex;
+                    li{
+                        padding: 10px;
+                        list-style: none;
+                        margin-bottom: 20px;
+                    }
+
+                    li:hover{
+                        color: #a37a10;
+                    }
+                }
+            }
+        }
+    }
+}
