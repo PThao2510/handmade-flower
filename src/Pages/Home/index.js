@@ -71,19 +71,21 @@ function Home(props) {
                 </div>
                 <div className='list_itemproduct'>
                     <Row gutter={16}>
-                        <Col className="gutter-row" span={6}>
+                        <Col className="gutter-row"  md={{ flex: '20%' }}>
                             <ItemProduct />
                         </Col>
-                        <Col className="gutter-row" span={6}>
+                        <Col className="gutter-row"  md={{ flex: '20%' }}>
                             <ItemProduct />
                         </Col>
-                        <Col className="gutter-row" span={6}>
+                        <Col className="gutter-row"  md={{ flex: '20%' }}>
                             <ItemProduct />
                         </Col>
-                        <Col className="gutter-row" span={5}>
+                        <Col className="gutter-row"  md={{ flex: '20%' }}>
                             <ItemProduct />
                         </Col>
-
+                        <Col className="gutter-row"  md={{ flex: '20%' }}>
+                            <ItemProduct />
+                        </Col>
                     </Row>
                 </div>
             </div>

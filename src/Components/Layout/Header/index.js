@@ -1,6 +1,5 @@
-import React, {useEffect, useLayoutEffect, useState} from 'react';
+import React, {useLayoutEffect, useState} from 'react';
 import { Link } from 'react-router-dom';
-import Container from 'react-bootstrap/Container';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
 import NavDropdown from 'react-bootstrap/NavDropdown';
@@ -9,26 +8,23 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
-import Recommend from '../../../Pages/Recommend';
 import './header.scss';
-import transitionEndListener from "react-bootstrap/transitionEndListener";
 
 const logo = require('../../../Assets/Home/logo.png');
 
 function Header(props) {
     const [isFixed,setIsFix] = useState(false);
     useLayoutEffect(()=>{
-        const fixedHeader=()=>{
+        window.addEventListener('scroll', ()=>{
             if (window.scrollY > 120){
                 setIsFix(true);
             }else {
                 setIsFix(false);
             }
-        }
-        window.addEventListener('scroll', fixedHeader);
+        });
     },[])
     return (
-        <div>
+        <div className="menu">
             <div className='menu_top'>
                 <div className='menu_top_container'>
                     <div className='top_menucontainer_left'>

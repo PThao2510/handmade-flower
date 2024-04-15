@@ -14,7 +14,6 @@ body {
 }
 
 .item_product {
-    margin: 0px 40px;
     padding-top: 50px;
     position: relative;
 
@@ -34,8 +33,7 @@ body {
             z-index: 1;
           }
         .img_product {
-            height: 399.96px;
-            width: 332px;
+            width: 100%;
             // border-radius: 150px 150px 0px 0px;
             // transition: transform 0.3s;
         }
