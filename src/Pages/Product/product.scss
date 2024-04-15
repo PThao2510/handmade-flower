@@ -14,30 +14,27 @@ body {
 }
 
 .content_product {
-    margin-top: 105px;
-
+   
     .slider_container {
         background-image: url('../../Assets/Product/bannerproductt.jpg');
         background-size: cover;
         background-position: center;
         background-repeat: no-repeat;
         width: 100%;
-        height: 350px;
+        height: 470px;
+        padding-top: 185px;
     }
 
     .product_image {
-        opacity: 0.9;
-        margin-left: 400px;
-        margin-right: 250px;
-        justify-content: space-between;
+        margin: auto 250px;
     }
 
-    .card {
+    .product-slider {
         border-radius: 0% !important;
         border: none;
-        box-shadow: 2px;
-        margin-left: 10;
-
+        display: flex !important;
+        align-items: center;
+        justify-content: center;
         .card-pic {
             justify-content: center;
             align-items: center;

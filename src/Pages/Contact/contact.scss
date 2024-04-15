@@ -14,7 +14,6 @@ body {
 }
 
 .banner_contact{
-    margin-top: 85px;
 
     .banner_recommend{
         background-image: url('../../Assets/Product/bannerproductt.jpg');
@@ -22,7 +21,7 @@ body {
       background-position: center;
       background-repeat: no-repeat;
       width: 100%;
-      height: 350px;
+      min-height: 470px;
     }
 }
 

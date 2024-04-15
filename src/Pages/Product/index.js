@@ -45,37 +45,29 @@ function Product(props) {
             <div className='content_product'>
                 <div className="slider_container">
                     <Slider {...settings} className='product_image' >
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic'></img >
-                            <p>1</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic' ></img >
-                            <p>2</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic' ></img >
-                            <p>3</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic' ></img >
-                            <p>4</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic'></img >
-                            <p>5</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic'></img >
-                            <p>5</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic' ></img >
-                            <p>7</p>
                         </div>
-                        <div className='card'>
+                        <div className='product-slider'>
                             <img src='https://i.pinimg.com/564x/95/0c/7f/950c7f29387167bc35fcb082bb3e6eb1.jpg' alt='' className='card-pic'></img >
-                            <p>8</p>
                         </div>
                     </Slider>
                 </div>
