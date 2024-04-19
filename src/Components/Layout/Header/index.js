@@ -1,4 +1,4 @@
-import React, {useLayoutEffect, useState} from 'react';
+import React, { useLayoutEffect, useState } from 'react';
 import { Link } from 'react-router-dom';
 import Nav from 'react-bootstrap/Nav';
 import Navbar from 'react-bootstrap/Navbar';
@@ -8,21 +8,65 @@ import { LiaShoppingBagSolid } from "react-icons/lia";
 import { IoSearchOutline } from "react-icons/io5";
 import { AiOutlineUser } from "react-icons/ai";
 import { faLocationDot, faEnvelope } from '@fortawesome/free-solid-svg-icons';
+import { faRightToBracket, faUserPlus } from '@fortawesome/free-solid-svg-icons';
+import { SearchOutlined, UserOutlined, BellOutlined } from '@ant-design/icons';
+import { Tabs, Input, Modal } from 'antd';
+import Login from '../../User/Login';
+import Register from '../../User/Register';
 import './header.scss';
 
+
+const items = [
+    {
+        key: '1',
+        label: (
+            <span>
+                <FontAwesomeIcon icon={faRightToBracket}  style={{ marginRight: '8px' }}/>
+                Login
+            </span>
+        ),
+        children: <Login />,
+    },
+    {
+        key: '2',
+        label: (
+            <span>
+                <FontAwesomeIcon icon={faUserPlus}  style={{ marginRight: '8px' }}/>
+                Register
+            </span>
+        ),
+        children: <Register />,
+    },
+];
 const logo = require('../../../Assets/Home/logo.png');
+const user = require('../../../Assets/Product/user.jpg');
 
 function Header(props) {
-    const [isFixed,setIsFix] = useState(false);
-    useLayoutEffect(()=>{
-        window.addEventListener('scroll', ()=>{
-            if (window.scrollY > 120){
+
+    const [isModalOpen, setIsModalOpen] = useState(false);
+
+    const showModal = () => {
+        setIsModalOpen(true);
+    };
+
+    const handleOk = () => {
+        setIsModalOpen(false);
+    };
+
+    const handleCancel = () => {
+        setIsModalOpen(false);
+    };
+
+    const [isFixed, setIsFix] = useState(false);
+    useLayoutEffect(() => {
+        window.addEventListener('scroll', () => {
+            if (window.scrollY > 120) {
                 setIsFix(true);
-            }else {
+            } else {
                 setIsFix(false);
             }
         });
-    },[])
+    }, [])
     return (
         <div className="menu">
             <div className='menu_top'>
@@ -45,10 +89,10 @@ function Header(props) {
                     </div>
                 </div>
             </div>
-            <div className={`header ${isFixed? 'active':''}`}>
+            <div className={`header ${isFixed ? 'active' : ''}`}>
                 <div className='header_container'>
                     <Navbar expand="lg" className='form_menu'>
-                        <Navbar.Brand className='logo_menu' href="/"><Link to= "/"><img src={logo} className='logo_img' /></Link></Navbar.Brand>
+                        <Navbar.Brand className='logo_menu' href="/"><Link to="/"><img src={logo} className='logo_img' /></Link></Navbar.Brand>
                         <Navbar.Toggle aria-controls="basic-navbar-nav" />
                         <Navbar.Collapse id="basic-navbar-nav">
                             <Nav className="me-auto header-menu-nav">
@@ -67,9 +111,21 @@ function Header(props) {
                         </Navbar.Collapse>
 
                         <div className='search-and-cart'>
-                            <i><IoSearchOutline /></i>
-                            <i><AiOutlineUser /></i>
-                            <i><LiaShoppingBagSolid /></i>
+                            <li><IoSearchOutline /></li>
+                            <li>
+                                <button onClick={showModal} className='btn_user'>
+                                    <AiOutlineUser />
+                                </button>
+                                <Modal open={isModalOpen} centered onCancel={handleCancel} width={500} footer={null} >
+                                    <div className="logo_form">
+                                        <img src={user} className='logo_img'/>
+                                    </div>
+                                    <div className='content-body'>
+                                        <Tabs defaultActiveKey="1" items={items} />
+                                    </div>
+                                </Modal>
+                            </li>
+                            <li><LiaShoppingBagSolid /></li>
                         </div>
                     </Navbar>
                 </div>
